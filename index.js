@@ -84,9 +84,8 @@ var sum = 0;
 function removeFromCart(item) {
  var valid = false
  for (var i = 0; i < cart.length; i++){
-   var currentItem = Object.keys(cart[i])
    
-   if (currentItem === item){
+   if (cart[i].hasOwnProperty(item)){
       cart.splice(i,1)
      valid = true
    }
